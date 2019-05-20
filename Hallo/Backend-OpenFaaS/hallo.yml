@@ -1,0 +1,10 @@
+provider:
+  name: faas
+  gateway: https://demo.openfaas-dotnet.de
+  network: "functions" 
+
+functions:
+  alexa-hallo:
+    lang: csharp-tdd
+    handler: ./hallo
+    image: fpommerening/openfaas-demos:alexa-hallo

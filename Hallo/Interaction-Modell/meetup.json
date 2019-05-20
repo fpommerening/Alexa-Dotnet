@@ -1,0 +1,48 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "meetup",
+            "intents": [
+                {
+                    "name": "greeting",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.DE_FIRST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "sag hallo zu {name}",
+                        "Begrüßung",
+                        "beginne treffen"
+                    ]
+                },
+                {
+                    "name": "breaknow",
+                    "slots": [],
+                    "samples": [
+                        "pause"
+                    ]
+                },
+                {
+                    "name": "sendoff",
+                    "slots": [],
+                    "samples": [
+                        "sag auf wiedersehen",
+                        "beende treffen",
+                        "schluss jetzt"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        }
+    }
+}
