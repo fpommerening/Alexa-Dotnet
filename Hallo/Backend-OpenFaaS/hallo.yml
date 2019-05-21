@@ -1,6 +1,6 @@
 provider:
   name: faas
-  gateway: https://demo.openfaas-dotnet.de
+  gateway: https://openfaas.demo-apps.de
   network: "functions" 
 
 functions:

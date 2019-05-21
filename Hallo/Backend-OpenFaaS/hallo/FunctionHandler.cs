@@ -15,7 +15,8 @@ namespace Function
         {
         }
 
-          public override void Handle(string input)
+
+        public override string Handle(string input)
         {
             var request = JsonConvert.DeserializeObject<SkillRequest>(input);
 
@@ -36,8 +37,8 @@ namespace Function
                 response = ResponseBuilder.Empty();
             }
 
-            Context.WriteContent(JsonConvert.SerializeObject(response, Formatting.Indented,
-                new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()}));
+            return JsonConvert.SerializeObject(response, Formatting.Indented,
+                new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()});
         }
 
         private static SkillResponse ExecuteIntent(SkillRequest skillRequest)
@@ -73,5 +74,6 @@ namespace Function
 
             return ResponseBuilder.Tell($"Intent {intentRequest.Intent.Name} ist unbekannt");
         }
+
     }
 }
